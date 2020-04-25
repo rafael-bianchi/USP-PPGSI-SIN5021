@@ -3,12 +3,12 @@
 
 Repository for the SIN5021 graduate course Planning and Reinforcement Learning
 
-# Classes:
+# Reports:
 
- 1. Intro - Probabilistic Planning and Reinforcement Learning
- 2. MDP Algorithms - Value Iteration and Policy Iteration
+ 1. Avaliação de algoritmos para MDPs
+ 2. TBD
  
- # Ementa da disciplina
+# Ementa da disciplina
 
 **Objetivo**: Estudar os fundamentos teóricos básicos, técnicas e principais abordagens usadas em planejamento probabilístico e aprendizado por reforço em Inteligência Artificial.<br/>
 **Justificativa da disciplina**: Esta disciplina optativa visa complementar a formação dos estudantes, especificamente aqueles interessados na área de Inteligência Artificial. Planejamento é um dos desafios mais importantes dessa área que permite incrementar a autonomia e flexibilidade de sistemas inteligentes e envolve gerar automaticamente uma sequência de ações para transformar uma situação inicial em uma situação final. As técnicas de planejamento têm sido aplicadas em uma variedade ampla de tarefas, entre elas: robótica, planejamento de processos industriais, logística/transporte, composição de serviços web, planejamento para recuperação de informação, planejamento de agentes autônomos, entre outras. O aprendizado por reforço é uma solução alternativa às tarefas citadas quando a dinâmica das tarefas não pode ser obtida a priori. Dessa forma, o aprendizado por reforço resolve o problema de planejamento por meio de interações com a tarefa em questão utilizando uma estratégia de tentativa e erro.<br/>
