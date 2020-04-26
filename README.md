@@ -5,7 +5,7 @@ Repository for the SIN5021 graduate course Planning and Reinforcement Learning
 
 # Reports:
 
- 1. Avaliação de algoritmos para MDPs
+ 1. [Avaliação de algoritmos para MDPs](Report1/README.md)
  2. TBD
  
 # Ementa da disciplina
