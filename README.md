@@ -1,23 +1,47 @@
 
-# [USP-PPGSI-SIN5021](https://uspdigital.usp.br/janus/componente/disciplinasOferecidasInicial.jsf?action=3&sgldis=SIN5021)
+# USP-PPGSI-SIN5021 - Probabilistic Planning and Reinforcement Learning
 
-Repository for the SIN5021 graduate course Planning and Reinforcement Learning
+Repository for the [SIN5021](https://uspdigital.usp.br/janus/componente/disciplinasOferecidasInicial.jsf?action=3&sgldis=SIN5021) graduate course Planning and Reinforcement Learning
 
 # Reports:
 
  1. [Avaliação de algoritmos para MDPs](Report1)
  2. TBD
  
-# Ementa da disciplina
+# Syllabus
 
-**Objetivo**: Estudar os fundamentos teóricos básicos, técnicas e principais abordagens usadas em planejamento probabilístico e aprendizado por reforço em Inteligência Artificial.
+**Objectives:** To study the theoretical fundamentals, techniques and main approaches used in probabilistic planning and reinforcement learning in Artificial Intelligence.
 
-**Justificativa da disciplina**: Esta disciplina optativa visa complementar a formação dos estudantes, especificamente aqueles interessados na área de Inteligência Artificial. Planejamento é um dos desafios mais importantes dessa área que permite incrementar a autonomia e flexibilidade de sistemas inteligentes e envolve gerar automaticamente uma sequência de ações para transformar uma situação inicial em uma situação final. As técnicas de planejamento têm sido aplicadas em uma variedade ampla de tarefas, entre elas: robótica, planejamento de processos industriais, logística/transporte, composição de serviços web, planejamento para recuperação de informação, planejamento de agentes autônomos, entre outras. O aprendizado por reforço é uma solução alternativa às tarefas citadas quando a dinâmica das tarefas não pode ser obtida a priori. Dessa forma, o aprendizado por reforço resolve o problema de planejamento por meio de interações com a tarefa em questão utilizando uma estratégia de tentativa e erro.
+**Rationale:** The aim of this elective course is to complement the training of students, especially those interested in Artificial Intelligence. Planning is one of the most important challenges in this area that allows to increase the autonomy and flexibility of intelligent systems and involves the generation of a sequence of actions to transform an initial situation in a final situation. The planning techniques have been applied in a wide variety of tasks, including: robotics, planning of industrial processes, logistics / transportation, web services composition, planning for recovery of information, planning of autonomous agents, among others. The reinforcement learning is an alternative solution to the tasks mentioned before when the dynamics of the tasks can not be obtained a priori. Thus, the reinforcement learning solves the planning problem through interactions with the environment using a trial and error strategy.
 
-**Carga horária**: 120
+**Content:** The following topics will be addressed: the problem of planning, classic and probabilistic planning, Markov decision processes and the existence of solutions, Policy Iteration and Value Iteration algorithms, factored Markov decision processes and basic algorithms, heuristic search algorithms, symbolic algorithms, approximation algorithms, extensions of Markov decision processes and applications, the reinforcement learning problem, the problem of prediction and solution for temporal difference, stochastic dynamic programming, Q-learning, Sarsa and prioritized Sweeping algorithms, spatial approximation, temporal approximation, batch learning and transfer learning.
 
-**Número de créditos**: 8
+1. Introduction and motivation. The planning task. Classical and probabilistic planning.
+2. Basic concepts about Markov decision processes and the existence of solutions. Factored Markov decision processes.
+3. Basic algorithms for MDPs: policy iteration, value iteration and linear programming formulation.
+4. Heuristic search algorithms for MDPs: LAO *, RTDP and extensions, among others.
+5. Symbolic algorithms for factored MDPs: SPUDD, Symbolic LAO *, among others.
+6. Approximate algorithms for MDPs, UCT, use of inadmissible heuristics, approximate policy iteration and approximate linear programming.
+7. Extensions of Markov decision processes: continuous MDPs, MDPs with imprecise probabilities, relational MDPs.
+8. Application of Probabilistic Planning: robotics, planning of industrial processes, logistics / transportation, web services composition, etc.
+9. Prediction in RL: Monte Carlo and Temporal Difference.
+10. Control in RL: Stochastic Dynamic Programming.
+11. Traditional algorithms for RL: Q-Learning, Sarsa, Sweeping.
+12. Spatial Approximation in RL: CMAC.
+13. Temporal Approximation in RL: options.
+14. Batch Reinforcement Learning.
+15. Transfer Learning.
 
-**Programa**: Serão abordados os seguintes tópicos: o problema de planejamento, planejamento clássico e planejamento probabilístico, processos de decisão markovianos (MDP) e a existência de soluções, algoritmos de Iteração de Política e Iteração de Valor, processos de decisão markovianos fatorados e algoritmos básicos, algoritmos baseados em busca heurística, algoritmos simbólicos, algoritmos aproximados, extensões de processos de decisão markovianos e aplicações, o problema de aprendizado por reforço (RL), o problema de predição e solução por diferença temporal, programação dinâmica estocástica, algoritmos Q-Learning, Sarsa e Prioritized Sweeping, aproximação espacial, aproximação temporal, aprendizado em Batch e transferência de aprendizado. 1. Introdução e motivação. A tarefa de planejamento. Planejamento clássico e probabilístico. 2. Conceitos básicos sobre processos de decisão markovianos e a existência de soluções. Processos de decisão markovianos fatorados. 3. Algoritmos básicos para MDPs: iteração de política, iteração de valor e formulação usando programação linear. 4. Algoritmos baseados em busca heurística para MDPs: LAO*, RTDP e extensões, entre outros. 5. Algoritmos simbólicos para MDPs fatorados: SPUDD, LAO* simbólico entre outros. 6. Algoritmos aproximados para MDPs, UCT, uso de heurísticas inadmissíveis, iteração de política aproximada e programação linear aproximada. 7. Extensões de processos de decisão markovianos: MDPs contínuos, MDPs com probabilidades imprecisas, MDPs relacionais. 8. Aplicações de Planejamento probabilístico: robótica, planejamento de processos industriais, logística/transporte, composição de serviços web, etc. 9. Predição em RL: Monte Carlo e Diferença Temporal. 10. Controle em RL: Programação Dinâmica Estocástica. 11. Algoritmos Tradicionais de RL: Q-Learning, Sarsa, Sweeping. 12. Aproximação Espacial em RL: CMAC. 13. Aproximação Temporal em RL: options. 14. Aprendizado por Reforço em Batch. 15. Transferência de Aprendizado.<br/>
+**Type of Assessment:** Grades will be assigned to exams and assignments involving the implementation and evaluation of algorithms. The final score is calculated by the weighted averag
 
-**Bibliografia**: \[1\] Mausam and Andrey Kolobov. Planning with Markov Decision Processes: An AI Perspective. Synthesis Lectures on Artificial Intelligence and Machine Learning. Morgan & Claypool publishers, 2012. \[2\] Csaba Szepesvari. Algorithms for Reinforcement Learning. Synthesis Lectures on Artificial Intelligence and Machine Learning. Morgan & Claypool publishers, 2013. \[3\] Sutton and Barto. Reinforcement Learning: an Introduction, 1998. \[4\] Van Otterlo and Wiering. Reinforcement Learning, 2012. \[5\] Bertsekas. Abstract Dynamic Programming, 2013. \[6\] C. Guestrin, D. Koller, R. Parr and S. Venkataraman. Efficient solution algorithms for factored MDPs. JAIR 19, pp. 399-468, 2003. \[7\] C. Boutilier, T. Dean and S. Hanks. Decision-Theoretic planning: Structural assumptions and computational leverage. JAIR 11, pp. 1-94, 1999. \[8\] Stuart Russel and Peter Norvig. Artificial Intelligence: A Modern Approach, 2 ed., Prentice Hall, 2002. \[9\] Dana Nau, Malik Ghallab, and Paolo Traverso. Automated Planning: Theory & Practice. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2004.
+**Bibliography:**
+
+\[1\] Mausam and Andrey Kolobov. Planning with Markov Decision Processes: An AI Perspective. Synthesis Lectures on Artificial Intelligence and Machine Learning. Morgan & Claypool publishers, 2012.<br/>
+\[2\] Csaba Szepesvari. Algorithms for Reinforcement Learning. Synthesis Lectures on Artificial Intelligence and Machine Learning. Morgan & Claypool publishers, 2013.<br/>
+\[3\] Sutton and Barto. Reinforcement Learning: an Introduction, 1998.<br/>
+\[4\] Van Otterlo and Wiering. Reinforcement Learning, 2012.<br/>
+\[5\] Bertsekas. Abstract Dynamic Programming, 2013.<br/>
+\[6\] C. Guestrin, D. Koller, R. Parr and S. Venkataraman. Efficient solution algorithms for factored MDPs. JAIR 19, pp. 399-468, 2003.<br/>
+\[7\] C. Boutilier, T. Dean and S. Hanks. Decision-Theoretic planning: Structural assumptions and computational leverage. JAIR 11, pp. 1-94, 1999.<br/>
+\[8\] Stuart Russel and Peter Norvig. Artificial Intelligence: A Modern Approach, 2 ed., Prentice Hall, 2002.<br/>
+\[9\] Dana Nau, Malik Ghallab, and Paolo Traverso. Automated Planning: Theory & Practice. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2004.
