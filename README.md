@@ -1,5 +1,5 @@
 
-# USP-PPGSI-SIN5021
+# [USP-PPGSI-SIN5021](https://uspdigital.usp.br/janus/componente/disciplinasOferecidasInicial.jsf?action=3&sgldis=SIN5021)
 
 Repository for the SIN5021 graduate course Planning and Reinforcement Learning
 
