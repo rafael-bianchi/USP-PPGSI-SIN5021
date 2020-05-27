@@ -4,23 +4,23 @@ from ..BaseAlgorithm import BaseAlgorithm
 class VI(BaseAlgorithm):
     '''Implementation of the Value iteration algorithm
     '''
-    def train(self):
-        '''Trains the model and returns the Value table and the policy.
+    def search(self):
+        '''Trains the model and returns the policy and Value table.
 
         Returns:
-            V(array1):The string which gets reversed.
-            pi(array2): The policy.   
+            pi(array1): The policy.   
+            V(array2):The string which gets reversed.
         '''
 
         V = np.zeros((self.env.S));
 
         res = float("inf")
 
-
-
         Q = np.zeros((self.env.S, len(self.env.A)))
 
         residuos = [];
+
+        self.iterations = 0
 
         while res > self.epsilon:
             for action in self.env.A:
@@ -32,5 +32,6 @@ class VI(BaseAlgorithm):
             V = np.amin(Q, axis=1)
             res = max(abs(V_old-V));
             residuos.append(res)
+            self.iterations += 1
         
-        return V, pi
+        return pi, V

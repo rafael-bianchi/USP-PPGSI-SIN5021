@@ -5,7 +5,8 @@ class BaseAlgorithm(ABC):
         self.env = env
         self.gamma = gamma
         self.epsilon = epsilon
+        self.iterations = 0
 
     @abstractmethod
-    def train(self):
+    def search(self):
         pass

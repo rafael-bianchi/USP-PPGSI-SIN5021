@@ -31,7 +31,7 @@ class EnvLoader():
                 s = y*self.X + x
                 self.states_X_Y[s] = (x,y)
 
-        base_path = f'{sys.path[0]}/assets/data/{envName}/'
+        base_path = os.path.join(sys.path[0], f'assets/data/{envName}/')
 
         self.A = ['Norte', 'Sul', 'Leste', 'Oeste']
 
@@ -41,6 +41,9 @@ class EnvLoader():
 
         self.cost = pd.read_csv(cost_file, header=None).to_numpy()
         self.cost = self.cost.reshape(self.cost.shape[0],)
+
+        # Goals
+        self.G = np.argwhere(self.cost == 0.0)[0].ravel()
 
         self.S = len(self.cost)
 
