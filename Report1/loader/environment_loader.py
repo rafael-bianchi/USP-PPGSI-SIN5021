@@ -45,7 +45,7 @@ class EnvLoader():
         # Goals
         self.G = np.argwhere(self.cost == 0.0)[0].ravel()
 
-        self.S = len(self.cost)
+        self.S = self.cost.shape[0]
 
         self.T = np.zeros((self.S, self.S, len(self.A)))
         self.R = np.repeat(self.cost, 4, axis=0).reshape(self.cost.shape[0],len(self.A))

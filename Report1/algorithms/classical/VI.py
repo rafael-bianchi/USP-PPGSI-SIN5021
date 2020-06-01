@@ -1,10 +1,12 @@
 import numpy as np
 from ..BaseAlgorithm import BaseAlgorithm
+import timeit
+
 
 class VI(BaseAlgorithm):
     '''Implementation of the Value iteration algorithm
     '''
-    def search(self):
+    def search(self, t_start, timeout):
         '''Trains the model and returns the policy and Value table.
 
         Returns:
@@ -23,6 +25,11 @@ class VI(BaseAlgorithm):
         self.iterations = 0
 
         while res > self.epsilon:
+            now = timeit.default_timer()
+            elapsed = now - t_start
+            if elapsed / 60 > timeout:
+                raise TimeoutError
+
             for action in self.env.A:
                 a = self.env.getActIdx(action)
                 Q[:, a] = self.env.R[:, a] +  self.gamma * self.env.T[:,:,a].dot(V)  
