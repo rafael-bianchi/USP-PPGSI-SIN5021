@@ -6,8 +6,8 @@
 
 ## Algoritmos
 
-- [ ] Algoritmo clássico: Value Iteration ou Policy Iteration
-- [ ] Algoritmo eficiente: LAO*, LRTDP ou MCTS
+- [x] Algoritmo clássico: Value Iteration ou Policy Iteration
+- [x] Algoritmo eficiente: LAO*, LRTDP ou MCTS
 - [ ] Variação da literatura do algoritmo anterior escolhido
 
 ## Problema
