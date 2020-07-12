@@ -1,3 +1,6 @@
+from collections import defaultdict
+import numpy as np
+
 class Q_Learning_Agent:
     def __init__(self, alpha, alpha_decay, epsilon, epsilon_decay, gamma, n_actions):
         

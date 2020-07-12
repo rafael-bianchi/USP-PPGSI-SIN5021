@@ -1,4 +1,5 @@
 import numpy as np
+from gym import ObservationWrapper
 
 class Binarizer(ObservationWrapper):
 
