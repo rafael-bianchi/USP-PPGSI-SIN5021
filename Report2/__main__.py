@@ -38,10 +38,17 @@ for ex in trange(n_exp):
     
     l100rew.append(lrews)
 
+#%%
 df = pd.DataFrame(l100rew).melt()
-sns.lineplot(x="variable", y="value", data=df)
+ax = sns.lineplot(x="variable", y="value", data=df)
+ax.set_title('Q-Learning')
+ax.set(xlabel='Episódios', ylabel='Recompensa(avg)')
+plt.show()
 
 #%%
+n_exp = 10
+episodes = 2000
+l100rew=[]
 for ex in trange(n_exp):
     scores = deque(maxlen=100)
     lrews = []
@@ -55,35 +62,56 @@ for ex in trange(n_exp):
     l100rew.append(lrews)
 
 df = pd.DataFrame(l100rew).melt()
-sns.lineplot(x="variable", y="value", data=df)
+ax = sns.lineplot(x="variable", y="value", data=df)
+ax.set_title('Dyna-Q')
+ax.set(xlabel='Episódios', ylabel='Recompensa(avg)')
+plt.show()
+
 #%%
 # Just to store the long-term-reward of the last 100 experiments 
-scores = deque(maxlen=100)
-lrews = []
-lr = []
-
+n_exp = 10
 episodes = 2000
-env_b = gym.make('CartPole-v0')
-agent = Actor_Critic_Agent(env_b)
-reward_hist = []
+l100rew=[]
+for ex in trange(n_exp):
+    scores = deque(maxlen=100)
+    lrews = []
+    env = gym.make("CartPole-v0")
+    agent = Actor_Critic_Agent(env)
+    for episode in trange(episodes):
+        observation = agent.env.reset()
 
-for episode in range(episodes):
-    observation = agent.env.reset()
+        R = 0
+        done = False
+        R, reward = 0,0
 
-    for step in range(500):
-        state = observation.reshape(-1, 4)
-        action = agent.act(state)
+        for step in range(env.spec.max_episode_steps):
+            state = observation.reshape(-1, 4)
+            action = agent.act(state)
 
-        observation_next, reward, done, _ = agent.env.step(action)
-        state_next = observation_next.reshape(-1, 4)
-        if done and step < 199:
-            reward = -1e-5
-        loss1, loss2 = agent.train(state, action, reward, state_next, done)
+            observation_next, reward, done, _ = agent.env.step(action)
+            state_next = observation_next.reshape(-1, 4)
+            if done and step < 199:
+                reward = -1e-5
+            loss1, loss2 = agent.train(state, action, reward, state_next, done)
 
-        observation = state_next[0]
+            observation = state_next[0]
+            R += reward
 
-        if done:
-            reward_hist.append(step+1)
-            if episode % 50 == 0:
-                print('Episode: {}/{} | Score: {}'.format(episode, episodes, step+1))
-            break
+            if done:
+                break
+                        
+        scores.append(R)
+        lrews.append(np.mean(scores))
+
+df = pd.DataFrame(l100rew).melt()
+df.to_csv('actor_critic.csv')
+
+#%%
+df = pd.read_csv('actor_critic.csv')
+# df = pd.DataFrame(l100rew).melt()
+ax = sns.lineplot(x="variable", y="value", data=df)
+ax.set_title('Actor-Critic')
+ax.set(xlabel='Episódios', ylabel='Recompensa(avg)')
+plt.show()
+
+# %%
